@@ -54,6 +54,23 @@ function fishOnce() {
       numPufferEl.innerHTML = numPuffer;
     }
   } else {
-    alert("Fish with Alex");
+    let randNum = Math.random();
+    if (randNum < 0.1) {
+      imgResultEl.src = "img/Raw-Cod.png";
+      numCod++;
+      numCodEl.innerHTML = numCod;
+    } else if (randNum < 0.2) {
+      imgResultEl.src = "img/Raw-Salmon.png";
+      numSalmon++;
+      numSalmonEl.innerHTML = numSalmon;
+    } else if (randNum < 0.5) {
+      imgResultEl.src = "img/Tropical-Fish.png";
+      numTropical++;
+      numTropicalEl.innerHTML = numTropical;
+    } else {
+      imgResultEl.src = "img/Pufferfish.png";
+      numPuffer++;
+      numPufferEl.innerHTML = numPuffer;
+    }
   }
 }
