@@ -6,6 +6,8 @@ let numCodEl = document.getElementById("num-cod");
 let numSalmonEl = document.getElementById("num-salmon");
 let numTropicalEl = document.getElementById("num-tropical");
 let numPufferEl = document.getElementById("num-puffer");
+let plus5Btn = document.getElementById("plus5");
+let until200Btn = document.getElementById("until200");
 
 let character = "Steve";
 let numCod = 0;
@@ -72,5 +74,22 @@ function fishOnce() {
       numPuffer++;
       numPufferEl.innerHTML = numPuffer;
     }
+  }
+}
+
+plus5Btn.addEventListener("click", plus5);
+
+function plus5() {
+  for (let n = 1; n <= 5; n++) {
+    fishOnce();
+  }
+}
+
+until200Btn.addEventListener("click", until200);
+
+function until200() {
+  let codTarget = numCod + 200;
+  while (numCod < codTarget) {
+    fishOnce();
   }
 }
